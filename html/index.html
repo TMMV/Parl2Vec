@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parl2Vec</title>
+  <link rel="shortcut icon" href="">
+  <meta property="og:image" content="" />
+  <meta property="og:description" content=""/>
+  <link rel="stylesheet" href="./styles/app.css">
+</head>
+<body>
+  <header id="header" class="row text-center">
+    <h1><a href="./">Parl2Vec</a></h1>
+  </header>
+  <section id="question">
+    <h2>O que é que aprendeste sobre a palavra <input id="scriptBox" class="query" type="text" onkeypress="return runScript(event)" /> ?</h2>
+  </section>
+  <section id="results-table">
+    <div id="results">
+      <span>Sugestões de palavras</span></br>
+      <a href="" onClick="query('corrupção'); return false;">corrupção</a></br>
+      <a href="" onClick="query('aborto'); return false;">aborto</a></br>
+      <a href="" onClick="query('Emprego'); return false;">Emprego</a></br>
+      <a href="" onClick="query('Angola'); return false;">Angola</a></br>
+    </div>
+  </section>
+  <footer id="footer">
+    <small>disclaimer: não tenho culpa do que aparece aqui</small>
+  </footer>
+  <script src="./scripts/jquery-1.12.3.min.js"></script>
+  <script src="./scripts/app.js"></script>
+</body>
+</html>

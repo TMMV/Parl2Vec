@@ -1,0 +1,33 @@
+body{
+  text-align: center;
+}
+
+#header{
+}
+
+#question{
+}
+
+#results-table{
+  margin: 0 auto;
+  max-width: 600px;
+}
+#results-table #results{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 600px;
+  height: 200px;
+}
+
+.not_found{
+  color: red;
+}
+
+.word{
+  font-weight: bold;
+}
+
+#footer{
+  margin-top: 20px;
+}
