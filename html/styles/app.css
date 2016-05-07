@@ -1,23 +1,90 @@
+@font-face {
+    font-family: 'orbitron'; /*a name to be used later*/
+    src: url('../fonts/OrbitronMedium.ttf'); /*URL to font*/
+}
+
 body{
+  padding: 15px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  background-color: #eaeaea;
+}
+
+a{
+  color: #567356;
+  text-decoration: none;
+}
+a:hover{
+  color: #435943;
 }
 
 #header{
+  background-image: url("../robot.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 260px 260px;
+  height: 110px;
+  padding-top: 140px;
 }
 
-#question{
+#header h1{
+  font-family: 'orbitron';
+  font-size: 1.1em;
+}
+
+#header a{
+  text-decoration: none;
+  color: #395939;
+}
+
+#question h2{
+  line-height: 25px;
+}
+
+#question input{
+  width: 200px;
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 0.7em;
+  color: #567356;
+}
+
+.spinner{
+  position: relative;
+  height: 50px;
+  padding-top: 70px;
+  margin-top: 25px;
+  font-weight: bold;
+  display: none;
 }
 
 #results-table{
   margin: 0 auto;
   max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 #results-table #results{
   display: table-cell;
   vertical-align: middle;
   text-align: center;
   width: 600px;
-  height: 200px;
+}
+
+a.word{
+  font-style: normal;
+  display: inline-block;
+  padding: 2px;
+}
+
+.sugestions{
+  font-style: italic;
+  color: #555;
+}
+
+.sugestions h3{
+  line-height: 10px;
 }
 
 .not_found{
@@ -28,6 +95,86 @@ body{
   font-weight: bold;
 }
 
-#footer{
-  margin-top: 20px;
+#description{
+  margin: 0 auto;
+  max-width: 820px;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.line{
+  display: block;
+  border-top: 1px solid #ccc;
+  height: 30px;
+  margin: 0 auto;
+  width: 75%;
+}
+
+footer{
+  margin-top: 75px;
+}
+strong{
+  color: #444;
+}
+
+@media (max-width: 600px) {
+  body{
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  #header{
+    background-size: 150px 150px;
+    height: 63px;
+    padding-top: 80px;
+  }
+
+  #header h1{
+    font-family: 'orbitron';
+    font-size: 0.9em;
+  }
+
+  #question h2{
+    line-height: 20px;
+  }
+
+  #question input{
+    width: 150px;
+    height: 15px;
+    padding: 2px 5px;
+  }
+
+  #results-table{
+    max-width: 600px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+  }
+  #results-table #results{
+    width: 600px;
+  }
+
+  a.word{
+    font-style: normal;
+    display: inline-block;
+    padding: 2px;
+  }
+
+  .sugestions h3{
+    line-height: 10px;
+  }
+
+  #description{
+    margin: 0 auto;
+    line-height: 1.5em;
+  }
+
+  .line{
+    border-top: 1px solid #ccc;
+    height: 10px;
+  }
+
+  footer{
+    font-size: 1.2em;
+    margin-top: 25px;
+  }
 }

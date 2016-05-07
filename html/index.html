@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Parl2Vec</title>
-  <link rel="shortcut icon" href="">
-  <meta property="og:image" content="" />
-  <meta property="og:description" content=""/>
+  <link rel="shortcut icon" href="http://www.tiagovieira.pt/parl2vec/favicon.ico">
+  <meta property="og:url" content="http://www.tiagovieira.pt/parl2vec/" />
+  <meta property="og:title" content="Parl2Vec" />
+  <meta property="og:description" content="O Parl2Vec é um pequeno robot que estabelece relações entre palavra/conceitos utilizando o algoritmo Word2Vec. O Parl2Vec foi treinado com mais de 10 milhões de frases de transcrições da Assembleia da Républica (desde 1976 até à data), recolhidas e gentilmente cedidas pelo excelente pessoal do demo.cratica." />
+  <meta property="og:image" content="http://www.tiagovieira.pt/parl2vec/robot_small.png" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="./styles/app.css">
 </head>
 <body>
@@ -13,21 +16,57 @@
     <h1><a href="./">Parl2Vec</a></h1>
   </header>
   <section id="question">
-    <h2>O que é que aprendeste sobre a palavra <input id="scriptBox" class="query" type="text" onkeypress="return runScript(event)" /> ?</h2>
+    <h2>O que é que aprendeste sobre a palavra</h2>
+    <h2>&nbsp;&nbsp;<input id="scriptBox" class="query" type="text" onkeypress="return runScript(event)"/> ?</h2>
   </section>
   <section id="results-table">
+    <div class="spinner">
+      <span id="spinner-tag"></span>
+      A perguntar... por favor aguarde!
+    </div>
     <div id="results">
-      <span>Sugestões de palavras</span></br>
-      <a href="" onClick="query('corrupção'); return false;">corrupção</a></br>
-      <a href="" onClick="query('aborto'); return false;">aborto</a></br>
-      <a href="" onClick="query('Emprego'); return false;">Emprego</a></br>
-      <a href="" onClick="query('Angola'); return false;">Angola</a></br>
+      <span class="sugestions">
+        <h3>Sugestões</h3>
+        <a class="word" href="" onClick="query('corrupção'); return false;">corrupção</a>
+        <a class="word" href="" onClick="query('aborto'); return false;">aborto</a>
+        <a class="word" href="" onClick="query('judeus'); return false;">judeus</a>
+        <a class="word" href="" onClick="query('angola'); return false;">angola</a>
+      </span>
     </div>
   </section>
-  <footer id="footer">
-    <small>disclaimer: não tenho culpa do que aparece aqui</small>
+  <section id="description">
+    <span class="line"></span>
+    <p>
+      O <strong>Parl2Vec</strong> é um pequeno robot que estabelece relações entre palavra/conceitos utilizando o algoritmo
+      <a href="https://radimrehurek.com/gensim/models/word2vec.html" target="_blank">Word2Vec</a>.
+    </p>
+    <p>
+      O <strong>Parl2Vec</strong> foi treinado com mais de 10 milhões de frases de transcrições
+      da Assembleia da Républica (desde 1976 até à data), recolhidas e gentilmente cedidas pelo excelente pessoal do
+      <a href="http://demo.cratica.org/" target="_blank">demo.cratica</a>.
+    </p>
+    <p>
+      Ainda há muito por fazer, se quiseres ajudar junta-te ao <a href="http://datewithdata.pt/" target="_blank">Date with Data</a> no próximo evento!
+    </p>
+    <strong>
+      Mais novidades em breve.
+    </strong>
+  </section>
+  <footer>
+    <small>Made by <a href="http://www.tiagovieira.pt/" target="_blank">Tiago Vieira</a> at <a href="http://datewithdata.pt/" target="_blank">Date with Data</a>.</small>
   </footer>
   <script src="./scripts/jquery-1.12.3.min.js"></script>
+  <script src="./scripts/spin.min.js"></script>
   <script src="./scripts/app.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43097229-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
