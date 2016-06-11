@@ -118,35 +118,30 @@ strong{
   color: #444;
 }
 
-@media only screen and (max-device-width: 480px), (max-width: 600px) {
+@media (max-width: 600px) {
   body{
     padding: 5px 10px;
   }
 
   #header{
-    background-size: 300px 300px;
-    height: 138px;
-    padding-top: 160px;
+    background-size: 150px 150px;
+    height: 63px;
+    padding-top: 80px;
   }
 
   #header h1{
     font-family: 'orbitron';
-    font-size: 1.3rem;
+    font-size: 0.7rem;
   }
 
   #question h2{
     line-height: 1.2;
   }
-  #question h2 span{
-    display:none;
-  }
 
   #question input{
-    width: 70%;
-    padding: 10px 10px;
-    height: 50px;
-    font-size: 2.5rem;
-    line-height: 1;
+    width: 150px;
+    padding: 2px 5px;
+    font-size: 1rem;
   }
 
   #results-table{
@@ -162,9 +157,6 @@ strong{
     font-style: normal;
     display: inline-block;
     padding: 2px;
-  }
-  #results{
-    font-size: 2rem;
   }
 
   .sugestions h3{

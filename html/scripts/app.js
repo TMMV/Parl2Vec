@@ -56,7 +56,7 @@ var query = function(word){
             for(i in words){
               word = words[i];
               textWord = '"' + word[0] + '"';
-              html = "<a class='word' href='#' onClick='query(" + textWord + "); return false;' style='font-size:" + Math.pow(word[1],2)*5 + "rem'>"+word[0]+"</a> ";
+              html = "<a class='word' href='#' onClick='query(" + textWord + "); return false;' style='font-size:" + Math.pow(word[1],2)*40 + "px'>"+word[0]+"</a> ";
               $("#results").append(html);
             }
           }
